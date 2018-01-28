@@ -1,0 +1,20 @@
+= form_for(@creative_configuration) do |f|
+  - if @creative_configuration.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@creative_configuration.errors.count, "error")
+        |  prohibited this creative_configuration from being saved:
+      ul
+        - @creative_configuration.errors.full_messages.each do |message|
+          li
+            = message
+  .field
+    = f.label :plan_id
+    br
+    = f.number_field :plan_id
+  .field
+    = f.label :configuration
+    br
+    = f.text_field :configuration
+  .actions
+    = f.submit

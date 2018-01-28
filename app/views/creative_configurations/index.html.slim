@@ -1,0 +1,27 @@
+p#notice
+  = notice
+h1
+  | Listing Creative Configurations
+table
+  thead
+    tr
+      th
+        | Plan
+      th
+        | Configuration
+      th[colspan="3"]
+  tbody
+    - @creative_configurations.each do |creative_configuration|
+      tr
+        td
+          = creative_configuration.plan_id
+        td
+          = creative_configuration.configuration
+        td
+          = link_to 'Show', creative_configuration
+        td
+          = link_to 'Edit', edit_creative_configuration_path(creative_configuration)
+        td
+          = link_to 'Destroy', creative_configuration, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Creative configuration', new_creative_configuration_path

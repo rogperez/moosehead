@@ -1,0 +1,13 @@
+p#notice
+  = notice
+p
+  strong
+    | Plan:
+  = @creative_configuration.plan_id
+p
+  strong
+    | Configuration:
+  = @creative_configuration.configuration
+= link_to 'Edit', edit_creative_configuration_path(@creative_configuration)
+|  | 
+= link_to 'Back', creative_configurations_path
