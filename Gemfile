@@ -16,6 +16,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'guard-rails'
   gem 'guard-rspec'
