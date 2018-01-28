@@ -1,0 +1,17 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @plan.name
+p
+  strong
+    | Account:
+  = @plan.account_id
+p
+  strong
+    | Price:
+  = @plan.price
+= link_to 'Edit', edit_plan_path(@plan)
+|  | 
+= link_to 'Back', plans_path
